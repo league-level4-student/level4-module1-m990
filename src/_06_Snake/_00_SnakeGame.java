@@ -121,19 +121,19 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		// if the space key is pressed, call the snake's feed method
 		switch(e.getKeyCode()) {
 		case KeyEvent.VK_DOWN:
-			System.out.println("down");
+
 			snake.setDirection(Direction.DOWN);
 			break;
 		case KeyEvent.VK_UP:
-			System.out.println("up");
+
 			snake.setDirection(Direction.UP);
 			break;
 		case KeyEvent.VK_LEFT:
-			System.out.println("left");
+
 			snake.setDirection(Direction.LEFT);
 			break;
 		case KeyEvent.VK_RIGHT:
-			System.out.println("right");
+
 			snake.setDirection(Direction.RIGHT);
 			break;
 		case KeyEvent.VK_SPACE:
@@ -146,7 +146,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 
 	private void setFoodLocation() {
 		//1. Create a new Location object that is set to a random location
-		Location newLocation = new Location(new Random().nextInt(100), new Random().nextInt(100));
+		Location newLocation = new Location(new Random().nextInt(600), new Random().nextInt(600));
 		System.out.println(newLocation.x);
 		System.out.println(newLocation.y);
 		//2. set the foodLocation variable equal to the Location object you just created.
@@ -198,7 +198,8 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		System.out.println(foodLocation.x);
 		System.out.println(foodLocation.y);
 		System.out.println("\n");
-		if (snake.getHeadLocation().x + 50 > foodLocation.x && snake.getHeadLocation().x - 50 < f) {
+		if (foodLocation.x + 150 > snake.getHeadLocation().x && foodLocation.x - 150 < snake.getHeadLocation().x && foodLocation.y + 150 > snake.getHeadLocation().y && foodLocation.y - 150 < snake.getHeadLocation().y) {
+			System.out.println("in x box thing");
 			setFoodLocation();
 			snake.feed();
 		}
