@@ -198,7 +198,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		System.out.println(foodLocation.x);
 		System.out.println(foodLocation.y);
 		System.out.println("\n");
-		if (foodLocation.x + 150 > snake.getHeadLocation().x && foodLocation.x - 150 < snake.getHeadLocation().x && foodLocation.y + 150 > snake.getHeadLocation().y && foodLocation.y - 150 < snake.getHeadLocation().y) {
+		if (foodLocation.x + 500 > snake.getHeadLocation().x && foodLocation.x - 500 < snake.getHeadLocation().x && foodLocation.y + 500 > snake.getHeadLocation().y && foodLocation.y - 500 < snake.getHeadLocation().y) {
 			System.out.println("in x box thing");
 			setFoodLocation();
 			snake.feed();
