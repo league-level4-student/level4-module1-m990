@@ -193,12 +193,15 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		}
 		//3. if the location of the head is equal to the location of the food,
 		// 	 feed the snake and set the food location
-		System.out.println(snake.getHeadLocation().x);
-		System.out.println(snake.getHeadLocation().y);
-		System.out.println(foodLocation.x);
-		System.out.println(foodLocation.y);
+		System.out.println("Snake x" + snake.getHeadLocation().x);
+		System.out.println("SnakeY:" + snake.getHeadLocation().y);
+		System.out.println("Food location x: " + foodLocation.x);
+		System.out.println("Food location y: " + foodLocation.y);
 		System.out.println("\n");
-		if (foodLocation.x + 500 > snake.getHeadLocation().x && foodLocation.x - 500 < snake.getHeadLocation().x && foodLocation.y + 500 > snake.getHeadLocation().y && foodLocation.y - 500 < snake.getHeadLocation().y) {
+		if (foodLocation.x + 50 > snake.getHeadLocation().x * 50 &&
+				foodLocation.x - 50 < snake.getHeadLocation().x * 50 &&
+				foodLocation.y + 50 > snake.getHeadLocation().y * 50 &&
+				foodLocation.y - 50 < snake.getHeadLocation().y * 50) {
 			System.out.println("in x box thing");
 			setFoodLocation();
 			snake.feed();

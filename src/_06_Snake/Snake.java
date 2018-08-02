@@ -117,7 +117,7 @@ public class Snake {
 			}
 		}*/
 		for (int i = 1; i < snake.size();i++) {
-			if (snake.get(i).getLocation() == head.getLocation()) {
+			if (snake.get(i).getLocation().equals(head.getLocation())) {
 				return true;
 			}
 		}
